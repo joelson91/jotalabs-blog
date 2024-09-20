@@ -8,5 +8,4 @@ cover:
     image: "images/"
     alt: "<alt text>"
     caption: "<text>"
-    relative: false
 ---
