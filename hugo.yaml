@@ -1,4 +1,140 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+# URL base do site
+baseURL: "https://jotalabs.netlify.app"
+
+# Configuração de idioma
+languageCode: pt-br
+
+# Título do site
+title: Jotalabs
+
+# Tema utilizado (PaperMod)
 theme: ["PaperMod"]
+
+# Idioma padrão do site
+defaultContentLanguage: pt
+
+# Configurações de SEO
+enableRobotsTXT: true # Permitir ou não a criação do arquivo robots.txt para SEO
+
+# Configurações de build
+buildDrafts: false # Incluir ou não rascunhos no build
+buildFuture: false # Incluir posts agendados para o futuro
+buildExpired: false # Incluir posts expirados
+
+# Minificação do HTML gerado
+minify:
+  disableXML: true # Desativar a geração de sitemaps em XML
+  minifyOutput: true # Minificar o HTML para melhorar o desempenho
+
+enableEmoji: true
+
+menu:
+  main:
+    - name: Posts
+      url: posts/
+      weight: 1
+    - name: Pesquisar
+      url: search/
+      weight: 2
+    - name: Tags
+      url: tags/
+      weight: 3
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Parâmetros personalizados do site
+params:
+  # env: "production" # Variável de ambiente (pode ser usada para desenvolvimento ou produção)
+
+  # Informações gerais do site
+  title: "Jotalabs"
+  description: "Blog de divulgação de software livre"
+  author: "Joelson Andrade"
+  images: # Imagens de cabeçalho ou destaque (deixar vazio para o padrão)
+
+  # Palavras-chave para SEO
+  keywords: ["blog", "design", "Programação", "linux"]
+
+  homeInfoParams:
+    Title: "Olá \U0001F44B"
+    Content: Bem-vindo ao meu Blog
+
+  # Ícones de redes sociais
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/joelson91"
+    - name: "threads"
+      url: "https://www.threads.net/@joelson.png"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/joelson91"
+
+  # Formatação da data exibida no site
+  DateFormat: "02 de Janeiro, 2006"
+
+  # Configurações adicionais de interface
+  languageAltTitle: # Título alternativo para outro idioma (deixar vazio se não usado)
+  ShowReadingTime: true # Mostrar tempo estimado de leitura em cada post
+  ShowShareButtons: true # Mostrar botões de compartilhamento
+  ShowCodeCopyButtons: true # Mostrar botões para copiar blocos de código
+  ShowFullTextinRSS: true # Mostrar texto completo nos feeds RSS
+  defaultTheme: auto # Tema padrão (claro, escuro ou auto)
+  disableThemeToggle: false # Desativar ou não o botão de alternância de tema
+  disableSpecial1stPost: true # Desativar estilo especial para o primeiro post
+  disableScrollToTop: false # Desativar ou não o botão de voltar ao topo
+  disableAnchoredHeadings: false # Desativar links âncoras em cabeçalhos
+  hideMeta: false # Ocultar metadados do post (autor, data, etc.)
+  hideSummary: false # Ocultar resumo do post na listagem
+  showtoc: true # Mostrar ou não o índice de conteúdo (TOC)
+  tocopen: false # Índice de conteúdo começa aberto ou fechado
+  ShowPostNavLinks: true # Mostrar links de navegação entre posts
+  ShowBreadCrumbs: true # Mostrar trilha de navegação (breadcrumbs)
+  ShareButtons: ["facebook", "whatsapp", "telegram", "linkedin"] # Personalizar botões de compartilhamento (se necessário)
+  ShowWordCount: false # Mostrar contagem de palavras no post
+  ShowRssButtonInSectionTermList: true # Mostrar botão de RSS em listas de seções
+  UseHugoToc: false # Usar TOC gerado pelo Hugo ou tema
+  comments: false # Ativar ou desativar sistema de comentários
+  hideFooter: false # Ocultar ou não o rodapé
+  CanonicalLinkText: # Texto para links canônicos (se necessário)
+  displayFullLangName: false # Mostrar o nome completo do idioma no site
+
+  # Configurações de Google Analytics
+  analytics:
+    google:
+      SiteVerificationTag: "G-N4BGRGDXSB" # Tag de verificação do site no Google
+
+  # Configurações de rótulo para o menu ou logo
+  label:
+    text: # Texto do rótulo
+    icon: # Ícone (se houver)
+    iconHeight: # Altura do ícone
+
+  # Configurações de assets (arquivos estáticos)
+  assets:
+    favicon: # URL do favicon (se houver)
+    disableHLJS: false # Desativar ou não o highlight.js para syntax highlight
+    disableFingerprinting: # Desativar fingerprinting de assets (se necessário)
+    theme_color: # Cor principal do tema
+    msapplication_TileColor: # Cor para a tile do Windows (se aplicável)
+
+  # Configurações de capa dos posts
+  cover:
+    linkFullImages: false # Linkar imagens em tela cheia (se necessário)
+    responsiveImages: true # Usar imagens responsivas (adaptáveis ao tamanho da tela)
+    hidden: false # Ocultar capa do post
+    hiddenInList: false # Ocultar capa na listagem de posts
+    hiddenInSingle: false # Ocultar capa no post individual
+
+  # Configurações de schema.org (para SEO)
+  schema:
+    publisherType: # Tipo de publicador (ex: Blog, Pessoa)
+    sameAs: # URLs adicionais para o schema (ex: redes sociais)
+
+  # Configurações de edição dos posts
+  editPost:
+    URL: "https://github.com/jotalabs-blog/content" # URL para sugerir edições no post
+    Text: "Sugerir mudanças" # Texto do botão de edição
+    appendFilePath: true # Adicionar o caminho do arquivo no botão de edição
