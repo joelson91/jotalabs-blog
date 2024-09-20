@@ -48,7 +48,7 @@ outputs:
 
 # Parâmetros personalizados do site
 params:
-  env: "production" # Variável de ambiente (pode ser usada para desenvolvimento ou produção)
+  # env: "production" # Variável de ambiente (pode ser usada para desenvolvimento ou produção)
 
   # Informações gerais do site
   title: "Jotalabs"
