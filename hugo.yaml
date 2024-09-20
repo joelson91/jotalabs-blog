@@ -26,8 +26,30 @@ minify:
   disableXML: true # Desativar a geração de sitemaps em XML
   minifyOutput: true # Minificar o HTML para melhorar o desempenho
 
+enableEmoji: true
+
+menu:
+  main:
+    - name: Posts
+      url: posts/
+      weight: 1
+    - name: Pesquisar
+      url: search/
+      weight: 2
+    - name: Tags
+      url: tags/
+      weight: 3
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 # Parâmetros personalizados do site
 params:
+  env: "production" # Variável de ambiente (pode ser usada para desenvolvimento ou produção)
+
   # Informações gerais do site
   title: "Jotalabs"
   description: "Blog de divulgação de software livre"
@@ -35,7 +57,11 @@ params:
   images: # Imagens de cabeçalho ou destaque (deixar vazio para o padrão)
 
   # Palavras-chave para SEO
-  keywords: ["blog", "design", "programação", "linux"]
+  keywords: ["blog", "design", "Programação", "linux"]
+
+  homeInfoParams:
+    Title: "Olá \U0001F44B"
+    Content: Bem-vindo ao meu Blog
 
   # Ícones de redes sociais
   socialIcons:
@@ -50,6 +76,7 @@ params:
   DateFormat: "02 de Janeiro, 2006"
 
   # Configurações adicionais de interface
+  languageAltTitle: # Título alternativo para outro idioma (deixar vazio se não usado)
   ShowReadingTime: true # Mostrar tempo estimado de leitura em cada post
   ShowShareButtons: true # Mostrar botões de compartilhamento
   ShowCodeCopyButtons: true # Mostrar botões para copiar blocos de código
@@ -65,25 +92,19 @@ params:
   tocopen: false # Índice de conteúdo começa aberto ou fechado
   ShowPostNavLinks: true # Mostrar links de navegação entre posts
   ShowBreadCrumbs: true # Mostrar trilha de navegação (breadcrumbs)
-  ShareButtons: [
-      "facebook",
-      "whatsapp",
-      "instagram",
-      "threads",
-      "telegram",
-      "linkedin",
-    ] # Personalizar botões de compartilhamento (se necessário)
+  ShareButtons: ["facebook", "whatsapp", "telegram", "linkedin"] # Personalizar botões de compartilhamento (se necessário)
   ShowWordCount: false # Mostrar contagem de palavras no post
   ShowRssButtonInSectionTermList: true # Mostrar botão de RSS em listas de seções
   UseHugoToc: false # Usar TOC gerado pelo Hugo ou tema
   comments: false # Ativar ou desativar sistema de comentários
   hideFooter: false # Ocultar ou não o rodapé
+  CanonicalLinkText: # Texto para links canônicos (se necessário)
   displayFullLangName: false # Mostrar o nome completo do idioma no site
 
   # Configurações de Google Analytics
   analytics:
     google:
-      SiteVerificationTag: G-N4BGRGDXSB
+      SiteVerificationTag: "G-N4BGRGDXSB" # Tag de verificação do site no Google
 
   # Configurações de rótulo para o menu ou logo
   label:
@@ -101,7 +122,7 @@ params:
 
   # Configurações de capa dos posts
   cover:
-    linkFullImages: true # Linkar imagens em tela cheia (se necessário)
+    linkFullImages: false # Linkar imagens em tela cheia (se necessário)
     responsiveImages: true # Usar imagens responsivas (adaptáveis ao tamanho da tela)
     hidden: false # Ocultar capa do post
     hiddenInList: false # Ocultar capa na listagem de posts
