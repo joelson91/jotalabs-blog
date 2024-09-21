@@ -114,7 +114,7 @@ params:
 
   # Configurações de assets (arquivos estáticos)
   assets:
-    favicon: "/favicon.ico" # URL do favicon (se houver)
+    favicon: "/assets/favicon.ico" # URL do favicon (se houver)
     disableHLJS: false # Desativar ou não o highlight.js para syntax highlight
     disableFingerprinting: # Desativar fingerprinting de assets (se necessário)
     theme_color: # Cor principal do tema
