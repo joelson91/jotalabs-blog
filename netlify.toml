@@ -1,7 +1,6 @@
-[build.environment]
-HUGO_VERSION = "0.134.2"
-TZ = "America/Belem"
-
 [build]
-publish = "public"
-command = "hugo --gc --minify"
+  command = "hugo"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.134.2"
