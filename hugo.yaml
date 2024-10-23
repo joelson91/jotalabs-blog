@@ -1,5 +1,5 @@
 # URL base do site
-baseURL: "https://jotalabs.netlify.app"
+baseURL: "https://jotalabs.blog/"
 
 # Configuração de idioma
 languageCode: pt-br
